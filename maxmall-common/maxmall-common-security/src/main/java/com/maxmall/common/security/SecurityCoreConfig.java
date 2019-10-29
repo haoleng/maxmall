@@ -131,7 +131,8 @@ public class SecurityCoreConfig extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-
+    //AuthenticationEntryPoint 用来解决匿名用户访问无权限资源时的异常
+    //AccessDeineHandler 用来解决认证过的用户访问无权限资源时的异常
     @Bean
     public AuthenticationEntryPoint macLoginUrlAuthenticationEntryPoint() {
         return new JsonAuthenticationEntryPoint();

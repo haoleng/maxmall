@@ -1,6 +1,10 @@
 server:
   port: 8003
 
+#日志输出配置
+logging:
+  level:
+    root: INFO
 spring:
   application:
     name: maxmall-provider-marketing
@@ -18,10 +22,10 @@ spring:
     joda-date-time-format: yyyy-MM-dd HH:mm:ss
     date-format: yyyy-MM-dd HH:mm:ss
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/db_maxmall?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/db_maxmall?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password:
+    password: root
     filters: stat,wall
     druid:
       initial-size: 50
