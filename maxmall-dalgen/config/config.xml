@@ -27,9 +27,9 @@
     <!--</database>-->
 
     <database name="test" class="com.mysql.jdbc.Driver" type="mysql">
-        <property name="url" value="jdbc:mysql://cd-cdb-3l5oajvw.sql.tencentcdb.com:63055/db_maxmall"/>
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/db_maxmall"/>
         <property name="userid" value="root"/>
-        <property name="password" value="ttEzYxG@7Nbn4PFB"/>
+        <property name="password" value="root"/>
         <property name="schema" value=""/>
     </database>
 

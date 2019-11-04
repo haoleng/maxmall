@@ -1,23 +1,22 @@
 package com.maxmall.common.security.interceptor;
 
-import com.maxmall.common.base.constant.GlobalConstant;
-import com.maxmall.common.base.dto.UserTokenDto;
-import com.maxmall.common.core.utils.UserTokenUtil;
-import com.maxmall.common.security.authorize.JwtTokenManager;
-import com.maxmall.common.util.RedisKeyUtil;
-import com.maxmall.common.util.ThreadLocalMap;
-import lombok.extern.slf4j.Slf4j;
+import java.io.IOException;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.lang.StringUtils;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.ModelAndView;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import com.maxmall.common.base.dto.UserTokenDto;
+import com.maxmall.common.core.utils.UserTokenUtil;
+import com.maxmall.common.util.RedisKeyUtil;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * The class Token interceptor.

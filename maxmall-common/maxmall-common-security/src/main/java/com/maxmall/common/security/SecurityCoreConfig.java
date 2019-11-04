@@ -76,6 +76,12 @@ public class SecurityCoreConfig extends WebSecurityConfigurerAdapter {
         authorizeConfigManager.config(http.authorizeRequests());
     }
 
+    /**
+     * Configure.
+     *	设置密码加密方式
+     * @param AuthenticationManagerBuilder the auth
+     * @throws Exception the exception
+     */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         UserDetailsService userDetailsService = SpringContextHolder.getBean(UserDetailsService.class);
